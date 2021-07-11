@@ -26,7 +26,7 @@ namespace POSUNO.api.Data
 
         private async Task CheckUserAsync()
         {
-            if (_context.Users.Any())
+            if (!_context.Users.Any())
             {
                 _context.Users.Add(new Entities.User { Email = "lmontoya@yopmail.com", FirstName = "Luisa", LastName = "Montoya", Password = "123456" });
                 _context.Users.Add(new Entities.User { Email = "crestrepo@yopmail.com", FirstName = "Cristian", LastName = "Restrepo", Password = "123456" });
