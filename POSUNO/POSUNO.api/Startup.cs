@@ -32,6 +32,8 @@ namespace POSUNO.api
                 cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
 
             });
+
+            services.AddTransient<SeedDb>();
         }
 
        
